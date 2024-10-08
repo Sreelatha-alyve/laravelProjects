@@ -21,16 +21,18 @@ Session Storage: Another option is to store the token in session storage.
 HTTP-Only Cookies: A more secure method is to store the token in an HTTP-only cookie (especially to protect against XSS attacks).
 Token Usage: When the client needs to make an authenticated request, the token is included in the Authorization header as a Bearer Token:
 
-_Authorization: Bearer <JWT>_
+   _ Authorization: Bearer <JWT>_
 
-Renewal: The token can have an expiration time (configured on the server), and once expired, the client may need to refresh the token or re-authenticate.
+    Renewal: The token can have an expiration time (configured on the server), and once expired, the client may need to refresh the token or re-authenticate.
 
 **Flow of JWT Token:**
+
 Login/Register:
 
 Client sends credentials.
 Server verifies credentials and generates a JWT token.
 Server sends the token back to the client.
+
 Client-Side Storage:
 
 Client stores the token (local storage, session storage, or HTTP-only cookies).
