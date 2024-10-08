@@ -44,3 +44,8 @@ Important Points:
 
 Server does not store the JWT token: The server does not keep track of tokens. Each request is independently verified using the token sent by the client.
 Token is stored on the client: The client is responsible for holding the token securely and including it in future requests.
+
+
+
+*********************************************************************************************************************************************************************************
+
