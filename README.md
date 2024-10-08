@@ -35,6 +35,7 @@ Client stores the token (local storage, session storage, or HTTP-only cookies).
 Authenticated Requests:
 
 For each subsequent request to a protected route, the client sends the token in the Authorization header.
+
 Server Verification:
 
 The server verifies the token by checking its signature. If the token is valid, the server grants access to the protected resource.
