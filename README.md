@@ -2,11 +2,12 @@
 **Client - Server:**
 
 1. Server-Side (Backend):
-JWT Token Creation: The server generates a JWT token when a user logs in or registers. This token contains encoded user data (usually the user ID and other claims) and is signed using a secret key.
+   
+    JWT Token Creation: The server generates a JWT token when a user logs in or registers. This token contains encoded user data (usually the user ID and other claims) and is signed using a secret key.
 
-Token Verification: The server does not store the token in a database or session. Instead, it stores the secret key that was used to sign the token.
+    Token Verification: The server does not store the token in a database or session. Instead, it stores the secret key that was used to sign the token.
 
-Stateless Verification: Each time the client makes an authenticated request (e.g., accessing a protected route), the token is sent by the client, and the server verifies its validity by checking the signature. Since the token is self-contained (it includes all necessary information, like the user ID), the server doesn't need to store or track individual tokens. This is what makes JWT authentication stateless.
+    Stateless Verification: Each time the client makes an authenticated request (e.g., accessing a protected route), the token is sent by the client, and the server verifies its validity by checking the    signature. Since the token is self-contained (it includes all necessary information, like the user ID), the server doesn't need to store or track individual tokens. This is what makes JWT authentication stateless.
 
 3. Client-Side (Frontend):
 Token Storage: After receiving the JWT token from the server (e.g., after a successful login), the client is responsible for storing the token securely.
