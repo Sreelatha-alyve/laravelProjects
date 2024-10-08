@@ -31,12 +31,15 @@ Server sends the token back to the client.
 Client-Side Storage:
 
 Client stores the token (local storage, session storage, or HTTP-only cookies).
+
 Authenticated Requests:
 
 For each subsequent request to a protected route, the client sends the token in the Authorization header.
 Server Verification:
 
 The server verifies the token by checking its signature. If the token is valid, the server grants access to the protected resource.
+
 Important Points:
+
 Server does not store the JWT token: The server does not keep track of tokens. Each request is independently verified using the token sent by the client.
 Token is stored on the client: The client is responsible for holding the token securely and including it in future requests.
