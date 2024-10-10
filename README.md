@@ -11,4 +11,6 @@
     Migration is used to define the schema of a table.
    
         php artisan make:migration create_ideas_table
+    The above command creates a file under Database directory -> Migrations directory -> create_ideas_table
+   
     
