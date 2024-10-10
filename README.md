@@ -7,7 +7,7 @@
         DB_DATABASE=learningdb
         DB_USERNAME=root
         DB_PASSWORD=
-2. Create a migration:
+2. Create a migration and Run migration
     Migration is used to define the schema of a table.
    
         php artisan make:migration create_ideas_table
@@ -19,7 +19,10 @@
             $table->unsignedInteger('likes')->default(0);
             $table->timestamps();
         });
+    Run the migration to create the table on the database server.
    
-4.
+            php artisan migrate
+   
+4. 
    
     
