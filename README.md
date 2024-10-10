@@ -22,7 +22,8 @@
     Run the migration to create the table on the database server.
    
             php artisan migrate
+    login to the database (mysql here) server to check if a table is created in the specified database name.
    
-4. 
+3. 
    
     
