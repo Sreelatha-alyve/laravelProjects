@@ -1,4 +1,9 @@
 **Create a model and save data to db:**
 
-    1. Connect to the desired database like mysql, sqlite etc by configuring the changes to the .env file in the laravel app, by providing the database connection.
-    2. 
+        
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=learningdb
+    DB_USERNAME=root
+    DB_PASSWORD=
