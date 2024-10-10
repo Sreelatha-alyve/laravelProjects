@@ -13,6 +13,13 @@
         php artisan make:migration create_ideas_table
     The above command creates a file under Database directory -> Migrations directory -> create_ideas_table, modify the schema definition to add few more column names.
    
-3.
+        Schema::create('ideas', function (Blueprint $table) {
+            $table->id();
+            $table->string('content');
+            $table->unsignedInteger('likes')->default(0);
+            $table->timestamps();
+        });
+   
+4.
    
     
