@@ -7,4 +7,8 @@
         DB_DATABASE=learningdb
         DB_USERNAME=root
         DB_PASSWORD=
-2. 
+2. Create a migration:
+    Migration is used to define the schema of a table.
+   
+        php artisan make:migration create_ideas_table
+    
