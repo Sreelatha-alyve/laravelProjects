@@ -24,6 +24,9 @@
             php artisan migrate
     login to the database (mysql here) server to check if a table is created in the specified database name.
    
-3. 
+3. Create a model with name idea.
+
+            php artisan make:model idea
+   
    
     
