@@ -13,3 +13,13 @@
         MAIL_ENCRYPTION=null
         MAIL_FROM_ADDRESS="hello@example.com"
         MAIL_FROM_NAME="${APP_NAME}"
+3. Create a mailable class, that defines the email content.
+    
+        php artisan make:mail UserNotificationMail
+       
+   Modify the contents of the file like the message or body of the email, subject and attachments.
+
+4. Create a job to send the emails.
+    
+           
+            
