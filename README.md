@@ -23,4 +23,8 @@
 
         protected $commands = [ \App\Console\Commands\UpdateCountryName::class,];
 
-   
+7. Run the command UpdateCountryName
+    
+        php artisan students:update-country
+
+8. Verify the change.
