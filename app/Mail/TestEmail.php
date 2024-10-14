@@ -9,25 +9,34 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class UserNotificationMail extends Mailable
+class TestEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    use Queueable, SerializesModels;
+
+    public $data;
+
+    public function __construct($data)
     {
-        //
+        $this->data = $data;
     }
 
+    public function build()
+    {
+        return $this->subject('Test Email from Laravel')
+                    ->markdown('emails.test');
+    }
     /**
      * Get the message envelope.
      */
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'User Notification Mail',
+            subject: 'Test Email',
         );
     }
 
@@ -37,7 +46,7 @@ class UserNotificationMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            markdown: 'emails.test',
         );
     }
 
