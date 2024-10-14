@@ -23,7 +23,24 @@
        i) TestEmail.php class in app/Mail/
        ii) test.blade.php template in Resources/views/emails/
 
-4. Create a job to send the emails.
+      Modify the test.blade.php to display the content to the recipient, modify TestEmail.php to send message to recipient updating the build() function that is used to configure the contents of the email and           return the test.blade.php view. 
+        
+5. Create a job to send the emails. This job is responsible for handling the sending of an email asynchronously by queuing the task. 
     
-           
-            
+        php artisan make:job SendTestEmail
+    
+    This will generate a file named SendTestEmail.php in app/jobs/
+    
+    Modify the file to use the TestEmail mailable class to send the emails.handle() function contains the main logic responsible for sending the emails, like creating instance of mailable class each time to send      an email.
+
+6. Dispatching the job using the controller class.
+    
+        php artisan make:controller EmailController
+    
+    dispatch the job using the EmailController class.
+
+7. Test the working of the job, 
+    
+    i) run the laravel app
+    ii) navigate to the url http://localhost:8000/send-email
+    iii) open mail hog server http://localhost:8025/
