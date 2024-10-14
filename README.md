@@ -17,5 +17,10 @@
 
         php artisan make:command UpdateCountryName
 
-6.
+    the above command genereates a UpdateCountryName.php file in app/Console/Commands , modify the file by defining logic to change the country name 'United States of America' to 'USA'
+
+6. Register the above created command by modifying the kernel.php file at app/Console/ 
+
+        protected $commands = [ \App\Console\Commands\UpdateCountryName::class,];
+
    
