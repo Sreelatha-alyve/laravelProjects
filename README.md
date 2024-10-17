@@ -32,7 +32,11 @@
         REDIS_HOST=172.22.80.1 # this is the ip address of the redis on wsl
         REDIS_PASSWORD=null
         REDIS_PORT=6379
-   
+
+    also change the default value of cache.php in app/Config
+
+        'default' => env('CACHE_DRIVER', 'redis'),
+
 7. Now create a command to cache the students data
         
         php artisan make:command CacheStudentData
@@ -43,5 +47,12 @@
 
         protected $commands = [\App\Console\Commands\CacheStudentsData::class,];
 
-9.
+9. Create a controller class 
+    
+        
+        
+        
+10. Run the command
+        
+        php artisan CacheStudentData
 
